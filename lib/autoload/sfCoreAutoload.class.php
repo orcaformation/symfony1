@@ -150,6 +150,7 @@ class sfCoreAutoload
       ->prune('skeleton')
       ->prune('default')
       ->prune('helper')
+      ->prune('lib/core/*') // Exclude PSR-4 Name spaced files loaded by composer
       ->name('*.php')
       ->in($libDir)
     ;
